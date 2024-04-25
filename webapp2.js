@@ -25,7 +25,7 @@ http.createServer(async function (req, res) {
             const result = await collection.findOne({ place: url.parse(req.url, true).query.data });
             if (result) {
               res.write(`<p>Place: ${result.place}</p>`);
-              res.write(`<p>Zip Code(s):</p>`);
+              res.write(`Zip Code(s): `);
               result.zips.forEach(zip => {
                  res.write(`${zip} `);
                });
