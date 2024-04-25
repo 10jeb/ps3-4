@@ -1,6 +1,6 @@
-// const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient;
 
-// const url = "mongodb+srv://jboyd1792:bf7CRKSwNjKyT8c5@cluster0.oqxp9cg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const url = "mongodb+srv://jboyd1792:bf7CRKSwNjKyT8c5@cluster0.oqxp9cg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 // async function main() {
 //   try {
@@ -30,7 +30,6 @@
                 res.write("You entered a place: " + url.parse(req.url, true).query.data);
             }
         }
-        res.write("helloooooo");
         res.end();
     }).listen(port);
 
