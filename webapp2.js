@@ -23,7 +23,6 @@ http.createServer(function (req, res) {
     }
     res.end();
 }).listen(port);
-conosle.log("All good b4 the ASYNCCCCCCCCCCCC");
 // async function main() {
 //   try {
 //     const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
