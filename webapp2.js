@@ -30,7 +30,7 @@
         //         res.write("You entered a place: " + url.parse(req.url, true).query.data);
         //     }
         // }
-        res.write("helloooooo);
+        res.write("helloooooo");
         res.end();
     }).listen(port);
 
