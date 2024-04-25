@@ -4,7 +4,7 @@ const mongo_url = "mongodb+srv://jboyd1792:bf7CRKSwNjKyT8c5@cluster0.oqxp9cg.mon
 var http = require('http');
 var url = require('url');
 var port = process.env.PORT || 3000;
-http.createServer(function (req, res) {
+http.createServer(async function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     var path = url.parse(req.url).pathname;
     var querystr = url.parse(req.url).query;
