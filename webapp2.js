@@ -25,12 +25,10 @@ http.createServer(async function (req, res) {
             const result = await collection.findOne({ place: url.parse(req.url, true).query.data });
             if (result) {
               res.write(`<p>Place: ${result.place}</p>`);
-              res.write(`<p>Zip Codes: ${result.zips}</p>`);
-              // res.write("<ul>");
-              // result.zipCodes.forEach(zip => {
-              //   res.write(`<li>${zip}</li>`);
-              // });
-              // res.write("</ul>");
+              res.write(`<p>Zip Code(s):</p>`);
+              result.zips.forEach(zip => {
+                 res.write(`${zip} `);
+               });
             } else {
               res.write(". Place not found.");
             }
