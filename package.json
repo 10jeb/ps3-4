@@ -1,6 +1,9 @@
 {
     "name": "webapp2",
     "version": "1.0.0",
+    "engines": {
+      "node": "14.x"
+    },
     "description": "part 2 of ps3-4",
     "main": "webapp2.js",
     "scripts": {
