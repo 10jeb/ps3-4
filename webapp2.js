@@ -24,18 +24,18 @@ http.createServer(function (req, res) {
     res.end();
 }).listen(port);
 conosle.log("All good b4 the ASYNCCCCCCCCCCCC");
-async function main() {
-  try {
-    const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
-    console.log("Connected to MongoDB");
+// async function main() {
+//   try {
+//     const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+//     console.log("Connected to MongoDB");
 
-    const db = client.db("dbhw");
-    const collection = db.collection('places');
+//     const db = client.db("dbhw");
+//     const collection = db.collection('places');
 
 
-  } catch (err) {
-    console.log(err);
-  }
-}
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
 
-main();
+// main();
