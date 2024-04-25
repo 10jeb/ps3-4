@@ -1,14 +1,14 @@
-// const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient;
 
-// const url = "mongodb+srv://jboyd1792:bf7CRKSwNjKyT8c5@cluster0.oqxp9cg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const url = "mongodb+srv://jboyd1792:bf7CRKSwNjKyT8c5@cluster0.oqxp9cg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-// async function main() {
-//   try {
-//     const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
-//     console.log("Connected to MongoDB");
+async function main() {
+  try {
+    const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+    console.log("Connected to MongoDB");
 
-//     const db = client.db("dbhw");
-//     const collection = db.collection('places');
+    const db = client.db("dbhw");
+    const collection = db.collection('places');
 
     var http = require('http');
     var url = require('url');
@@ -34,9 +34,9 @@
         res.end();
     }).listen(port);
 
-//   } catch (err) {
-//     console.log(err);
-//   }
-// }
+  } catch (err) {
+    console.log(err);
+  }
+}
 
-// main();
+main();
