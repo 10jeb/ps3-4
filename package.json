@@ -4,6 +4,9 @@
     "engines": {
       "node": "14.x"
     },
+    "dependencies": {
+      "mongodb": "^4.4.0"
+    },
     "description": "part 2 of ps3-4",
     "main": "webapp2.js",
     "scripts": {
