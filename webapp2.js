@@ -22,6 +22,18 @@ http.createServer(async function (req, res) {
             res.write("You entered a zipcode: " + url.parse(req.url, true).query.data);
         } else {
             res.write("You entered a place: " + url.parse(req.url, true).query.data);
+            const result = await collection.findOne({ place: url.parse(req.url, true).query.data });
+            if (result) {
+              res.write(`<p>Place: ${result.place}</p>`);
+              res.write("<p>Zip Codes:</p>");
+              res.write("<ul>");
+              result.zipCodes.forEach(zip => {
+                res.write(`<li>${zip}</li>`);
+              });
+              res.write("</ul>");
+            } else {
+              res.write("Place not found.");
+            }
         }
     }
     res.end();
